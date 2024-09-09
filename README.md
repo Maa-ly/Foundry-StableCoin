@@ -1,66 +1,37 @@
-## Foundry
+# DSCEngine - Decentralized Algorithmic Stablecoin
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+**Author**: Lydia Ahenkorah  
+**Project Status**: Development In Progress  
 
-Foundry consists of:
+## Overview
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+The DSCEngine contract is designed to create a decentralized, algorithmically stable cryptocurrency that maintains a 1:1 peg with the US dollar. 
+The system uses exogenous collateral to ensure the stability of the token, while minimizing complexity and avoiding governance or fees. 
+It draws inspiration from the MakerDAO DSS (DAI) system but differs in key areas such as governance and collateral types.
 
-## Documentation
+## Features
 
-https://book.getfoundry.sh/
+- **Exogenous Collateral**: The stablecoin is backed by external assets such as WETH and WBTC.
+- **Dollar Pegged**: 1 token is designed to always equal $1.
+- **Algorithmically Stable**: The system uses algorithms to ensure stability without relying on governance.
+- **Overcollateralized**: At no point should the value of the collateral be less than or equal to the dollar value of the stablecoin (DSC).
+- This ensures that the stablecoin remains fully backed.
 
-## Usage
+## Similarities and Differences to DAI
 
-### Build
+This system is similar to DAI in that it uses overcollateralization and aims to maintain a stable $1 peg. However, unlike DAI, the DSCEngine:
 
-```shell
-$ forge build
-```
+- Has no governance.
+- Has no fees.
+- Is exclusively backed by WETH and WBTC.
 
-### Test
+## Functionality
 
-```shell
-$ forge test
-```
+- **Mining and Redeeming DSC**: The DSCEngine contract handles the issuance (minting) and redemption (burning) of DSC tokens.
+- **Collateral Management**: Users can deposit and withdraw collateral, with strict rules ensuring that the system remains overcollateralized at all times.
 
-### Format
+## Current Status
 
-```shell
-$ forge fmt
-```
+This project is still under active development, and additional testing and library integrations are required before it can be deployed for public use. 
+While the core structure of the contract is in place, several critical components, including stability mechanisms and collateral handling, are still being refined.
 
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
