@@ -5,14 +5,25 @@
 
 ## Overview
 
+<<<<<<< HEAD
 The DSCEngine contract is designed to create a decentralized, algorithmically stable cryptocurrency that maintains a 1:1 peg with the US dollar. The system uses exogenous collateral to ensure the stability of the token, while minimizing complexity and avoiding governance or fees. It draws inspiration from the MakerDAO DSS (DAI) system but differs in key areas such as governance and collateral types.
+=======
+The DSCEngine contract is designed to create a decentralized, algorithmically stable cryptocurrency that maintains a 1:1 peg with the US dollar. 
+The system uses exogenous collateral to ensure the stability of the token, while minimizing complexity and avoiding governance or fees. 
+It draws inspiration from the MakerDAO DSS (DAI) system but differs in key areas such as governance and collateral types.
+>>>>>>> e0e29661fdb0e111812b4ec060b663456e7e454c
 
 ## Features
 
 - **Exogenous Collateral**: The stablecoin is backed by external assets such as WETH and WBTC.
 - **Dollar Pegged**: 1 token is designed to always equal $1.
 - **Algorithmically Stable**: The system uses algorithms to ensure stability without relying on governance.
+<<<<<<< HEAD
 - **Overcollateralized**: At no point should the value of the collateral be less than or equal to the dollar value of the stablecoin (DSC). This ensures that the stablecoin remains fully backed.
+=======
+- **Overcollateralized**: At no point should the value of the collateral be less than or equal to the dollar value of the stablecoin (DSC).
+- This ensures that the stablecoin remains fully backed.
+>>>>>>> e0e29661fdb0e111812b4ec060b663456e7e454c
 
 ## Similarities and Differences to DAI
 
@@ -29,4 +40,10 @@ This system is similar to DAI in that it uses overcollateralization and aims to 
 
 ## Current Status
 
+<<<<<<< HEAD
 This project is still under active development, and additional testing and library integrations are required before it can be deployed for public use. While the core structure of the contract is in place, several critical components, including stability mechanisms and collateral handling, are still being refined.
+=======
+This project is still under active development, and additional testing and library integrations are required before it can be deployed for public use. 
+While the core structure of the contract is in place, several critical components, including stability mechanisms and collateral handling, are still being refined.
+
+>>>>>>> e0e29661fdb0e111812b4ec060b663456e7e454c
